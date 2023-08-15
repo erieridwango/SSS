@@ -14,25 +14,23 @@ assessmentButton.onclick =  () => {
 
 
    // 診断結果表示エリアの作成
-   resultDivision.innerText = '';
-   const header = document.createElement('h3');
-   header.innerText = '診断結果';
-   resultDivision.appendChild(header);
- 
-   const paragraph = document.createElement('p');
-   const result = assessment(userName);
-   paragraph.innerText = result;
-   resultDivision.appendChild(paragraph);
+   conar result = assessment(userName);
+  resultDivision.innerText = '
+    < div class="card" id = "result-area" >
+ <div class = "card-header text-bg-promary">診断結果</div>
+<div class = "card-body">
+<p class = "card-text">${result}</p>
+</div>
+
+</div >
 
 
-
-
- // ツイートエリアの作成
+// ツイートエリアの作成
  tweetDivision.innerText = '';
  const anchor = document.createElement('a');
  const hrefValue =
    'https://twitter.com/intent/tweet?button_hashtag=' 
-   + encodeURIComponent(あなたのいいところ') 
+   + encodeURIComponent('あなたのいいところ') 
    + '&ref_src=twsrc%5Etfw';
 
  anchor.setAttribute('href', hrefValue);
